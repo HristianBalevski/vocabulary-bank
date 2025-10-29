@@ -6,16 +6,20 @@ table, thead, th {
 }
 
 table {
-    border-collapse: collapse;  
-    margin: 2em auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 80%;
+  table-layout: fixed;
+  margin: 0 auto;
 }
 
-table, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-    width: 50%;
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
 }
+
+
 
 .english-middle {
     background-color: rgb(178, 245, 245);
