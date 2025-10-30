@@ -1,110 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocabulary Bank</title>
-     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Vocabulary Bank — B1</title>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-   <nav>
-    <ul>
-        <li>
-            <a href="">VOCABULARY BANK - LEARN WORDS FOR LEVEL B1</a>
-        </li>
-    </ul>
-   </nav>
-    <table>
-        <thead>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Основна навигация">
+      <a href="#" class="brand" aria-label="Начало">Hello, My name is Hristian. Welcome to my page.</a>
+
+      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">
+        <span class="sr-only">Отвори меню</span>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+
+      
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Представяне -->
+    <section class="hero">
+      <h1>Vocabulary Bank — Level B1</h1>
+      <p>
+        Това е твоят лек и ясен речник за ниво B1 — думи с фонетика, значения и примери, подредени в удобна таблица.
+      </p>
+      <p>
+        Когато си готов, натисни бутона, за да покажеш списъка с думи.
+      </p>
+
+      <button
+        id="toggle-vocab"
+        class="btn-primary"
+        type="button"
+        aria-expanded="false"
+        aria-controls="vocab-section"
+      >
+        Думи B1
+      </button>
+    </section>
+
+    <section id="vocab-section" class="table-area" hidden tabindex="-1">
+      <h2 class="visually-hidden">Списък с думи B1</h2>
+
+      <div class="table-wrap">
+        <table class="vocab-table">
+          <caption>Лексика B1: думи, транскрипция, значение и пример</caption>
+          <thead>
             <tr>
-                <th>Word</th>
-                <th>Phonetic</th>
-                <th>Значение</th>
-                <th>Example</th>
+              <th scope="col">Word</th>
+              <th scope="col">Phonetic</th>
+              <th scope="col">Значение</th>
+              <th scope="col">Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>scruffy</td>
+              <td>skrʌfi</td>
+              <td>мърляв, развлечен, износен</td>
+              <td>He found a scruffy little dog.</td>
             </tr>
             <tr>
-                <td>scruffy</td>
-                <td>skrʌfi</td>
-                <td>мърляв, развлечен, износен</td>
-                <td>He found a scruffy little dog.</td>
+              <td>loose</td>
+              <td>luːs</td>
+              <td>хлабав, отпуснат, широк</td>
+              <td>The window latch is loose.</td>
             </tr>
             <tr>
-                <td>loose</td>
-                <td>luːs</td>
-                <td>хлабав, отпуснат, широк</td>
-                <td>The window latch is loose.</td>
+              <td>grumpy</td>
+              <td>ɡrʌmpi</td>
+              <td>намръщен, кисел, ядосан</td>
+              <td>He was grumpy because he didn’t get enough sleep last night.</td>
             </tr>
             <tr>
-                <td>grumpy</td>
-                <td>ɡrʌmpi</td>
-                <td>намръщен, кисел, ядосан</td>
-                <td>He was grumpy because he didn’t get enough sleep last night.</td>
+              <td>more precisely</td>
+              <td>mɔːr prɪˈsaɪs.li</td>
+              <td>по-точно</td>
+              <td>The meeting will start at 3:00 pm, more precisely at 3:15 pm.</td>
             </tr>
             <tr>
-                <td>more precisely</td>
-                <td>mɔːr prɪˈsaɪs.li</td>
-                <td>по-точно</td>
-                <td>The meeting will start at 3:00 pm, more precisely at 3:15 pm.</td>
+              <td>to wade</td>
+              <td>weɪd</td>
+              <td>газя, нагазвам</td>
+              <td>They waded through the muddy field.</td>
             </tr>
             <tr>
-                <td>to wade</td>
-                <td>weɪd</td>
-                <td>газя, нагазвам</td>
-                <td>They waded through the muddy field.</td>
+              <td>to feel off</td>
+              <td>fiːl ɒf</td>
+              <td>чувствам се зле</td>
+              <td>I feel off today, so I’ll rest at home.</td>
             </tr>
             <tr>
-                <td>to feel off</td>
-                <td>fiːl ɒf</td>
-                <td>чувствам се зле</td>
-                <td>I feel off today, so I’ll rest at home.</td>
+              <td>to sign</td>
+              <td>saɪn</td>
+              <td>разписвам</td>
+              <td>Please sign your name at the bottom.</td>
             </tr>
             <tr>
-                <td>to sign</td>
-                <td>saɪn</td>
-                <td>разписвам</td>
-                <td>Please sign your name at the bottom.</td>
+              <td>I look forward</td>
+              <td>aɪ lʊk fɔː.wəd</td>
+              <td>очаквам с нетърпение</td>
+              <td>I look forward to meeting you next week.</td>
             </tr>
             <tr>
-                <td>I look forward</td>
-                <td>aɪ lʊk fɔː.wəd</td>
-                <td>очаквам с нетърпение</td>
-                <td>I look forward to meeting you next week.</td>
+              <td>to suggest</td>
+              <td>səˈdʒest</td>
+              <td>предлагам (идея)</td>
+              <td>Could I suggest a different time for the meeting?</td>
             </tr>
             <tr>
-                <td>to suggest</td>
-                <td>səˈdʒest</td>
-                <td>предлагам (идея)</td>
-                <td>Could I suggest a different time for the meeting?</td>
+              <td>to head</td>
+              <td>hed</td>
+              <td>отправям се, насочвам се</td>
+              <td>We’re heading to the beach to see the sunrise.</td>
             </tr>
             <tr>
-                <td>to head</td>
-                <td>hed</td>
-                <td>отправям се, насочвам се</td>
-                <td>We’re heading to the beach to see the sunrise</td>
+              <td>grateful</td>
+              <td>ɡreɪtfl</td>
+              <td>благодарен, признателен</td>
+              <td>I’m really grateful to you for helping me pack.</td>
             </tr>
             <tr>
-                <td>grateful</td>
-                <td>ɡreɪtfl</td>
-                <td>благодарен, признателен</td>
-                <td>I’m really grateful to you for helping me pack.</td>
+              <td>to hang out</td>
+              <td>hæŋ ˈaʊt</td>
+              <td>мотая се, забавлявам се</td>
+              <td>I love hanging out at the local pub after work.</td>
             </tr>
             <tr>
-                <td>to hang out</td>
-                <td>hæŋ ˈaʊt</td>
-                <td>мотая се, забавлявам се</td>
-                <td>I love hanging out at the local pub after work.</td>
+              <td>to jet off</td>
+              <td>ʤet ˈɒf</td>
+              <td>излитам</td>
+              <td>We’re jetting off to Spain tomorrow!</td>
             </tr>
             <tr>
-                <td>to jet off</td>
-                <td>ʤet ˈɒf</td>
-                <td>излитам</td>
-                <td>We’re jetting off to Spain tomorrow!</td>
+              <td>to explore</td>
+              <td>ɪkˈsplɔː</td>
+              <td>изследвам</td>
+              <td>I’m going to Peru and I can’t wait to explore!</td>
             </tr>
-        </thead>
-    </table>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const primaryMenu = document.getElementById('primary-menu');
+    navToggle.addEventListener('click', () => {
+      const open = primaryMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    const toggleVocabBtn = document.getElementById('toggle-vocab');
+    const vocabSection = document.getElementById('vocab-section');
+
+    function toggleVocab(expand) {
+      const shouldExpand = typeof expand === 'boolean'
+        ? expand
+        : toggleVocabBtn.getAttribute('aria-expanded') !== 'true';
+      toggleVocabBtn.setAttribute('aria-expanded', String(shouldExpand));
+      vocabSection.hidden = !shouldExpand;
+      if (shouldExpand) {
+        vocabSection.focus();
+        vocabSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    toggleVocabBtn.addEventListener('click', () => toggleVocab());
+
+    document.getElementById('menu-vocab').addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleVocab(true);
+    });
+  </script>
 </body>
 </html>
+
