@@ -15,46 +15,54 @@
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar" aria-label="Основна навигация">
+  <header class="site-header" role="banner">
+    <nav class="navbar" aria-label="Основна навигация" role="navigation">
       <a href="#" class="brand" aria-label="Начало">HELLO, MY NAME IS HRISTIAN. WELCOME TO MY PAGE.</a>
-
       <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">
         <span class="sr-only">Отвори меню</span>
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
-
-      
     </nav>
   </header>
 
-  <main class="container">
-    <section class="hero">
+  <main class="container" role="main">
+    <section class="hero" aria-label="Представяне">
       <h1>Vocabulary Bank</h1>
-      <p>
-        Това е твоят онлайн речник с думи, фонетика, значения и примери.
-      </p>
-      <p>
-        Тук ще научиш как да произнасяш думите с <b>Modern Received Pronunciation (RP) акцент</b>.
-      </p>
-      <p>
-        Натисни бутона за да се покаже таблицата.
-      </p>
+      <p>Това е твоят онлайн речник с думи, фонетика, значения и примери.</p>
+      <p>Тук ще научиш как да произнасяш думите с <b>Modern Received Pronunciation (RP)</b> акцент.</p>
+      <p>Натисни бутон веднъж за показване на съответната таблица, и втори път ако искаш да я скриеш.</p>
 
-      <button
-        id="toggle-vocab"
-        class="btn-primary"
-        type="button"
-        aria-expanded="false"
-        aria-controls="vocab-section"
-      >
-        Думи B1
-      </button>
+      <div class="action-row" role="group" aria-label="Основни действия">
+        <button
+          id="btn-vocab"
+          class="btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="panel-vocab"
+        >
+          Думи B1
+        </button>
+
+        <button
+          id="btn-similies"
+          class="btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="panel-similies"
+        >
+          Similies
+        </button>
+      </div>
     </section>
 
-    <section id="vocab-section" class="table-area" hidden tabindex="-1">
+    <section
+      id="panel-vocab"
+      class="table-area"
+      hidden
+      tabindex="-1"
+      aria-labelledby="btn-vocab"
+    >
       <h2 class="visually-hidden">Списък с думи B1</h2>
-
       <div class="table-wrap">
         <table class="vocab-table">
           <caption>Лексика B1: думи, транскрипция, значение и пример</caption>
@@ -164,58 +172,58 @@
               <td>I’m going to Peru and I can’t wait to explore!</td>
             </tr>
             <tr>
-                <td>landscape</td>
-                <td>lændskeɪp</td>
-                <td>пейзаж</td>
-                <td>The landscape in the countryside is filled with hills and green fields.</td>
+              <td>landscape</td>
+              <td>lændskeɪp</td>
+              <td>пейзаж</td>
+              <td>The landscape in the countryside is filled with hills and green fields.</td>
             </tr>
             <tr>
-                <td>to lose touch</td>
-                <td>luːz tʌʧ</td>
-                <td>губя връзка (контакт) с някой</td>
-                <td>Sadly, we lost touch after we left university.</td>
+              <td>to lose touch</td>
+              <td>luːz tʌtʃ</td>
+              <td>губя връзка (контакт) с някой</td>
+              <td>Sadly, we lost touch after we left university.</td>
             </tr>
             <tr>
-                <td>to get to know</td>
-                <td>get tə nəʊ</td>
-                <td>запознавам се с някой, опознавам го</td>
-                <td>I got to know Sarah well when we worked together.</td>
+              <td>to get to know</td>
+              <td>get tə nəʊ</td>
+              <td>запознавам се с някой, опознавам го</td>
+              <td>I got to know Sarah well when we worked together.</td>
             </tr>
             <tr>
-                <td>to get on with</td>
-                <td>ɡet ˈɒn</td>
-                <td>разбирам се, сработвам се (с някого)</td>
-                <td>I get on with my family and we spend a lot of time together.</td>
+              <td>to get on with</td>
+              <td>ɡet ˈɒn</td>
+              <td>разбирам се, сработвам се (с някого)</td>
+              <td>I get on with my family and we spend a lot of time together.</td>
             </tr>
             <tr>
-                <td>to settle down</td>
-                <td>setl ˈdaʊn</td>
-                <td>установявам се</td>
-                <td>I travelled a lot when I was younger before I settled down in London.</td>
+              <td>to settle down</td>
+              <td>setl ˈdaʊn</td>
+              <td>установявам се</td>
+              <td>I travelled a lot when I was younger before I settled down in London.</td>
             </tr>
             <tr>
-                <td>to graduate</td>
-                <td>ɡrædʒueɪt</td>
-                <td>завършвам, дипломирам се</td>
-                <td>I graduated from Cardiff University in 2018.</td>
+              <td>to graduate</td>
+              <td>ɡrædʒueɪt</td>
+              <td>завършвам, дипломирам се</td>
+              <td>I graduated from Cardiff University in 2018.</td>
             </tr>
             <tr>
-                <td>on the side</td>
-                <td>ɒn ðə saɪd</td>
-                <td>в допълнение към основната ви работа</td>
-                <td>I’m a nurse, but I also work as a DJ on <b>the side</b>.</td>
+              <td>on the side</td>
+              <td>ɒn ðə saɪd</td>
+              <td>в допълнение към основната ви работа</td>
+              <td>I’m a nurse, but I also work as a DJ on <b>the side</b>.</td>
             </tr>
             <tr>
-                <td>sabbatical</td>
-                <td>səˈbætɪkl</td>
-                <td>творчески отпуск</td>
-                <td>I am taking a sabbatical next year.</td>
+              <td>sabbatical</td>
+              <td>səˈbætɪkl</td>
+              <td>творчески отпуск</td>
+              <td>I am taking a sabbatical next year.</td>
             </tr>
             <tr>
-                <td>to jump at sth</td>
-                <td>dʒʌmp æt</td>
-                <td>да приема нещо с голяма радост</td>
-                <td>Dara jumped at the chance to go to Spain for work.</td>
+              <td>to jump at sth</td>
+              <td>dʒʌmp æt</td>
+              <td>да приема нещо с голяма радост</td>
+              <td>Dara jumped at the chance to go to Spain for work.</td>
             </tr>
             <tr>
               <td>to get in touch</td>
@@ -399,7 +407,7 @@
             </tr>
             <tr>
               <td>timid</td>
-              <td>tɪm.ɪd</td>
+              <td>tɪm.ɪд</td>
               <td>несигурен</td>
               <td>He is timid and doesn’t like speaking in front of the class.</td>
             </tr>
@@ -441,7 +449,7 @@
             </tr>
             <tr>
               <td>humorous</td>
-              <td>ˈhjuːmərəs</td>
+              <td>ˈhjuːмərəs</td>
               <td>шеговит, забавен</td>
               <td>Would you like to hear a humorous story from when I was at university?</td>
             </tr>
@@ -463,42 +471,206 @@
               <td>много глупаво, нелепо</td>
               <td>I can’t believe the comedian came on stage dressed as a shoe - it was utterly ridiculous!</td>
             </tr>
+            <tr>
+              <td>query</td>
+              <td>kwɪə.ri</td>
+              <td>питам, запитване</td>
+              <td>She sent a query to the company about her order</td>
+            </tr>
+            <tr>
+              <td>a tale</td>
+              <td>teɪl</td>
+              <td>приказка</td>
+              <td>The old man told a tale about dragons and hidden treasure.</td>
+            </tr>
+            <tr>
+              <td>fiction</td>
+              <td>fɪk.ʃən</td>
+              <td>измислица, художествена литература</td>
+              <td>I prefer reading fiction because it helps me escape from reality.</td>
+            </tr>
+            <tr>
+              <td>inaccurate</td>
+              <td>ɪnˈæk.jə.rət</td>
+              <td>неточен, грешен</td>
+              <td>The report was inaccurate and needed to be corrected.</td>
+            </tr>
+            <tr>
+              <td>accurate</td>
+              <td>æk.jə.rət</td>
+              <td>точен, прецизен</td>
+              <td>The information in this book is very accurate.</td>
+            </tr>
+            <tr>
+              <td>to chase</td>
+              <td>tʃeɪs</td>
+              <td>преследвам, гоня</td>
+              <td>She’s chasing her dream of becoming a doctor.</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </section>
+
+    <section
+      id="panel-similies"
+      class="table-area"
+      hidden
+      tabindex="-1"
+      aria-labelledby="btn-similies"
+    >
+      <h2 class="visually-hidden">Similies</h2>
+      <div class="table-wrap">
+        <table class="vocab-table">
+          <caption>Similies: изрази и примери</caption>
+          <thead>
+            <tr>
+              <th scope="col">Simile</th>
+              <th scope="col">Phonetic</th>
+              <th scope="col">Значение</th>
+              <th scope="col">Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>as dead as a doornail</td>
+              <td>əz ded əz ə dɔːneɪl</td>
+              <td>напълно мъртъв</td>
+              <td>There was no doubt that my computer was as dead as a doornail. I think it’s time to buy a new one.</td>
+            </tr>
+            <tr>
+              <td>as strong as an ox</td>
+              <td>əz strɒŋ əz ən ɒks</td>
+              <td>Той е силен като вол</td>
+              <td>I remember my dad being as strong as an ox. He would lift my brother and me up, one in each arm!</td>
+            </tr>
+            <tr>
+              <td>as quiet as a mouse</td>
+              <td>əz ˈkwaɪət əz ə maʊs</td>
+              <td>много тих, незабележим</td>
+              <td>We were as quiet as mice when we snuck in last night.</td>
+            </tr>
+            <tr>
+              <td>as black as night</td>
+              <td>əz blæk əz naɪt</td>
+              <td>напълно черен, тъмен като нощта</td>
+              <td>He likes his coffee to be as black as night. No milk, no cream, nothing!</td>
+            </tr>
+            <tr>
+              <td>as good as gold</td>
+              <td>əz gʊd əz gəʊld</td>
+              <td>Това се използва, за да се опише някой, който е изключително добре възпитан.</td>
+              <td>You all have been as good as gold today, so let’s have a pizza party!</td>
+            </tr>
+            <tr>
+              <td>as dry as a bone</td>
+              <td>əz draɪ (j) əz ə bəʊn</td>
+              <td>Използваме това, за да опишем нещо, което е изключително сухо и не съдържа никаква влага.</td>
+              <td>Our garden was as dry as a bone when we returned from holiday.</td>
+            </tr>
+            <tr>
+              <td>as mad as a hatter</td>
+              <td>əz mæd əz ə ˈhætə</td>
+              <td>Използваме това сравнение, за да опишем някой, който е малко откачен или луд.</td>
+              <td>If Rima thinks I am going to work on Saturday, she’s as mad as a hatter.</td>
+            </tr>
+            <tr>
+              <td>as eager as a beaver</td>
+              <td>əz ˈiːɡər əz ə ˈbiːvə</td>
+              <td>много усърден и ентусиазиран човек</td>
+              <td>She’s as eager as a beaver to start her new job.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner container">
+        <section class="footer-brand">
+          <h2 class="footer-title">Vocabulary Bank</h2>
+          <p class="footer-desc">
+            Учиш ефективно: думи, фонетика, значения и примери — подредени ясно и достъпно.
+          </p>
+        </section>
+
+        <nav class="footer-nav" aria-label="Footer навигация">
+          <ul class="footer-links">
+            <li><a href="#">Начало</a></li>
+            <li><a href="#panel-vocab" class="footer-jump" data-target="btn-vocab">Думи B1</a></li>
+            <li><a href="#panel-similies" class="footer-jump" data-target="btn-similies">Similies</a></li>
+          </ul>
+        </nav>
+
+        <section class="footer-social" aria-label="Социални връзки">
+          <ul class="social-list">
+            <li>
+              <a href="https://github.com/" target="_blank" rel="noopener" aria-label="Към GitHub профил">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Към Twitter профил">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Към LinkedIn профил">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© <span id="year"></span> Hristian. All rights reserved.</p>
+        <button type="button" class="back-to-top" aria-label="Върни се най-горе">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          <span class="back-to-top-text">Top</span>
+        </button>
+      </div>
+    </footer>
   </main>
 
   <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const primaryMenu = document.getElementById('primary-menu');
-    navToggle.addEventListener('click', () => {
-      const open = primaryMenu.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(open));
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelector('.back-to-top').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    const toggleVocabBtn = document.getElementById('toggle-vocab');
-    const vocabSection = document.getElementById('vocab-section');
-
-    function toggleVocab(expand) {
-      const shouldExpand = typeof expand === 'boolean'
-        ? expand
-        : toggleVocabBtn.getAttribute('aria-expanded') !== 'true';
-      toggleVocabBtn.setAttribute('aria-expanded', String(shouldExpand));
-      vocabSection.hidden = !shouldExpand;
-      if (shouldExpand) {
-        vocabSection.focus();
-        vocabSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+    function wireDisclosure(btnId, panelId) {
+      const btn = document.getElementById(btnId);
+      const panel = document.getElementById(panelId);
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        panel.hidden = expanded;
+        if (!expanded) {
+          panel.focus();
+          panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     }
+    wireDisclosure('btn-vocab', 'panel-vocab');
+    wireDisclosure('btn-similies', 'panel-similies');
 
-    toggleVocabBtn.addEventListener('click', () => toggleVocab());
-
-    document.getElementById('menu-vocab').addEventListener('click', (e) => {
-      e.preventDefault();
-      toggleVocab(true);
+    document.querySelectorAll('.footer-jump').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const targetBtnId = a.getAttribute('data-target');
+        const btn = document.getElementById(targetBtnId);
+        const panelId = btn.getAttribute('aria-controls');
+        const panel = document.getElementById(panelId);
+        if (btn && panel) {
+          e.preventDefault();
+          btn.setAttribute('aria-expanded', 'true');
+          panel.hidden = false;
+          panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          panel.focus();
+        }
+      });
     });
   </script>
 </body>
 </html>
-
